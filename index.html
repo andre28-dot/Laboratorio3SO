@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Permite utilizar caracteres como tildes y la letra ñ -->
+    <meta charset="UTF-8">
+
+    <!-- Hace que la página se adapte al tamaño de celulares, tablets y computadoras -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Muestra una pequeña descripción de la página en los buscadores -->
+    <meta name="description" content="NexaTech, soluciones digitales para un futuro conectado.">
+
+    <!-- Es el título que aparece en la pestaña del navegador -->
+    <title>NexaKeisyTech | Soluciones Digitales</title>
+
+    <!-- Conecta el archivo CSS donde están los estilos de la página -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Permite establecer una conexión anticipada con Google Fonts para cargar las letras -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Importa el tipo de letra Inter en diferentes grosores -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO: contiene el nombre de la página y el menú de navegación -->
+    <header class="header">
+        <nav class="navbar container">
+
+            <!-- Logo de NexaTech, formado por una letra y el nombre de la empresa -->
+            <a href="#" class="logo">
+                <span class="logo-icon">N</span>
+                <span>NexaTech</span>
+            </a>
+
+            <!-- Lista de enlaces para moverse entre las diferentes secciones -->
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+            </ul>
+
+            <!-- Botón que lleva directamente a la sección de contacto -->
+            <a href="#contacto" class="nav-button">Contáctanos</a>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- SECCIÓN PRINCIPAL: es la primera parte que observa el visitante -->
+        <section class="hero" id="inicio">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <!-- Pequeña etiqueta que presenta el mensaje principal de la página -->
+                    <span class="tag">
+                        ✦ Innovación que transforma
+                    </span>
+
+                    <!-- Título principal que presenta la idea de NexaTech -->
+                    <h1>
+                        Creamos soluciones
+                        <span>para el futuro digital.</span>
+                    </h1>
+
+                    <!-- Texto breve que explica el propósito de la empresa -->
+                    <p>
+                        En NexaTech conectamos tecnología, creatividad e innovación
+                        para transformar ideas en experiencias digitales.
+                        Descubre nuevas posibilidades y lleva tus proyectos
+                        al siguiente nivel.
+                    </p>
+
+                    <!-- Botones que permiten visitar otras secciones de la página -->
+                    <div class="hero-buttons">
+                        <a href="#servicios" class="btn-primary">
+                            Descubrir más →
+                        </a>
+
+                        <a href="#nosotros" class="btn-secondary">
+                            Conócenos
+                        </a>
+                    </div>
+
+                    <!-- Muestra tres datos destacados relacionados con la propuesta de NexaTech -->
+                    <div class="hero-info">
+                        <div>
+                            <strong>100%</strong>
+                            <span>Innovación</span>
+                        </div>
+
+                        <div>
+                            <strong>Digital</strong>
+                            <span>Nuevas ideas</span>
+                        </div>
+
+                        <div>
+                            <strong>Futuro</strong>
+                            <span>Conectado</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ILUSTRACIÓN TECNOLÓGICA: contiene una tarjeta visual con un diseño relacionado con la tecnología -->
+                <div class="hero-visual">
+
+                    <!-- Elemento decorativo que crea un efecto de iluminación -->
+                    <div class="visual-glow"></div>
+
+                    <!-- Tarjeta que reúne la ilustración y el contenido tecnológico -->
+                    <div class="tech-card">
+
+                        <!-- Parte superior de la tarjeta, con un indicador y un pequeño menú visual -->
+                        <div class="card-top">
+                            <span class="status-dot"></span>
+                            <span>INNOVACIÓN DIGITAL</span>
+                            <span class="card-menu">•••</span>
+                        </div>
+
+                        <!-- Dibujo creado con SVG para representar una pantalla de computadora y código -->
+                        <div class="tech-icon">
+                            <svg viewBox="0 0 120 120" fill="none">
+                                <!-- Dibuja la pantalla de la computadora -->
+                                <rect x="22" y="20" width="76" height="65" rx="12"
+                                    stroke="currentColor" stroke-width="4"/>
+
+                                <!-- Representa los símbolos de código dentro de la pantalla -->
+                                <path d="M42 43L53 54L42 65"
+                                    stroke="currentColor" stroke-width="4"
+                                    stroke-linecap="round" stroke-linejoin="round"/>
+
+                                <!-- Dibuja una línea debajo de los símbolos -->
+                                <path d="M61 66H79"
+                                    stroke="currentColor" stroke-width="4"
+                                    stroke-linecap="round"/>
+
+                                <!-- Representa la base de la computadora -->
+                                <path d="M60 85V98M42 98H78"
+                                    stroke="currentColor" stroke-width="4"
+                                    stroke-linecap="round"/>
+                            </svg>
+                        </div>
+
+                        <!-- Título y descripción que aparecen dentro de la tarjeta -->
+                        <h2>Ideas que conectan</h2>
+                        <p>La tecnología es el comienzo de nuevas oportunidades.</p>
+
+                        <!-- Muestra una barra visual para representar el avance de la transformación digital -->
+                        <div class="progress-area">
+                            <div class="progress-label">
+                                <span>Transformación digital</span>
+                                <span>100%</span>
+                            </div>
+
+                            <!-- La parte interna de esta barra recibe su diseño desde CSS -->
+                            <div class="progress-bar">
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <!-- Parte inferior de la tarjeta con dos palabras relacionadas con la empresa -->
+                        <div class="card-footer">
+                            <span>✦ Creatividad</span>
+                            <span>✦ Tecnología</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Elementos decorativos que aparecen alrededor de la tarjeta -->
+                    <div class="floating-element element-one">✧</div>
+                    <div class="floating-element element-two">+</div>
+                    <div class="floating-element element-three">01</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SECCIÓN NOSOTROS: presenta quiénes somos y cuál es el propósito de la propuesta -->
+        <section class="about section" id="nosotros">
+
+            <div class="container about-content">
+
+                <div class="section-heading">
+                    <!-- Texto pequeño que identifica esta sección -->
+                    <span class="section-tag">QUIÉNES SOMOS</span>
+
+                    <!-- Título que introduce la información de NexaTech -->
+                    <h2>
+                        La tecnología puede
+                        <span>cambiarlo todo.</span>
+                    </h2>
+                </div>
+
+                <!-- Párrafo que explica el objetivo y la importancia de la tecnología para la empresa -->
+                <p>
+                    Somos una propuesta tecnológica enfocada en demostrar
+                    cómo las herramientas digitales pueden facilitar
+                    procesos, impulsar la creatividad y construir nuevas
+                    oportunidades. Nuestro propósito es acercar la innovación
+                    a las personas de una manera sencilla y accesible.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- SECCIÓN SERVICIOS: presenta las áreas tecnológicas que ofrece NexaTech -->
+        <section class="services section" id="servicios">
+
+            <div class="container">
+
+                <div class="section-heading center">
+                    <!-- Etiqueta que introduce los servicios -->
+                    <span class="section-tag">LO QUE OFRECEMOS</span>
+
+                    <!-- Título principal de esta sección -->
+                    <h2>
+                        Explorando el mundo
+                        <span>digital.</span>
+                    </h2>
+
+                    <!-- Pequeña explicación sobre los servicios -->
+                    <p>
+                        Descubre algunas de las áreas que impulsan
+                        nuestra visión tecnológica.
+                    </p>
+                </div>
+
+                <!-- Agrupa las tres tarjetas que muestran los servicios -->
+                <div class="service-grid">
+
+                    <!-- Primera tarjeta: desarrollo digital -->
+                    <article class="service-card">
+                        <div class="service-icon">💻</div>
+                        <h3>Desarrollo digital</h3>
+                        <p>
+                            Creación de experiencias digitales modernas,
+                            funcionales y adaptables.
+                        </p>
+                    </article>
+
+                    <!-- Segunda tarjeta: soluciones tecnológicas -->
+                    <article class="service-card">
+                        <div class="service-icon">☁️</div>
+                        <h3>Soluciones tecnológicas</h3>
+                        <p>
+                            Aprovechamos herramientas tecnológicas
+                            para facilitar diferentes procesos.
+                        </p>
+                    </article>
+
+                    <!-- Tercera tarjeta: innovación -->
+                    <article class="service-card">
+                        <div class="service-icon">🚀</div>
+                        <h3>Innovación</h3>
+                        <p>
+                            Impulsamos nuevas ideas para construir
+                            experiencias y oportunidades.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- LLAMADO A LA ACCIÓN: invita al visitante a conocer más y ponerse en contacto -->
+        <section class="contact section" id="contacto">
+
+            <div class="container contact-box">
+
+                <!-- Frase que introduce el mensaje de contacto -->
+                <span class="section-tag">EL FUTURO COMIENZA HOY</span>
+
+                <!-- Mensaje principal para llamar la atención del visitante -->
+                <h2>
+                    ¿Listo para descubrir
+                    nuevas posibilidades?
+                </h2>
+
+                <!-- Texto que acompaña la invitación -->
+                <p>
+                    La innovación comienza con una idea.
+                    Atrévete a explorar el mundo digital.
+                </p>
+
+                <!-- Abre el programa de correo del visitante para escribir un mensaje -->
+                <a href="mailto:contacto@nexatech.com" class="btn-primary">
+                    ¡Comencemos! →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA: muestra información final y el nombre de la empresa -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <!-- Repite el logo de NexaTech en la parte inferior -->
+            <a href="#" class="logo">
+                <span class="logo-icon">N</span>
+                <span>NexaTech</span>
+            </a>
+
+            <!-- Indica el año y los derechos reservados -->
+            <p>© 2026 NexaTech. Todos los derechos reservados.</p>
+
+            <!-- Frase final que representa el estilo de la página -->
+            <span>Diseñado con creatividad e innovación.</span>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
+```

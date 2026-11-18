@@ -1,0 +1,695 @@
+/* CONFIGURACIÓN GENERAL */
+
+/* Se aplica a todos los elementos para quitar espacios que vienen por defecto y facilitar el control de sus tamaños */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hace que el desplazamiento entre las secciones sea suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos principales de toda la página */
+body {
+    font-family: 'Inter', sans-serif; /* Tipo de letra que se utiliza en la página */
+    background-color: #080e1c; /* Color oscuro del fondo */
+    color: #ffffff; /* Color blanco para los textos */
+    line-height: 1.6; /* Espacio entre las líneas del texto */
+}
+
+/* Quita el subrayado de los enlaces y hace que utilicen el color de su elemento */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Define el ancho general del contenido y lo mantiene centrado */
+.container {
+    width: 90%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+/* Agrega espacio arriba y abajo de las secciones */
+.section {
+    padding: 100px 0;
+}
+
+
+/* ENCABEZADO */
+
+/* Define el fondo y la línea inferior del encabezado */
+.header {
+    background-color: #080e1c;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Organiza los elementos del menú en una misma fila */
+.navbar {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Organiza el logo y define el tamaño y grosor de su texto */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+/* Diseña el cuadro que contiene la letra del logo */
+.logo-icon {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, #6c63ff, #28c8e8);
+    display: grid;
+    place-items: center;
+    border-radius: 11px;
+    font-size: 22px;
+    color: white;
+}
+
+/* Coloca los enlaces del menú en una fila y quita las viñetas de la lista */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+
+/* Define el color y tamaño de los enlaces del menú */
+.nav-links a {
+    color: #aab4c9;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Cambia el color del enlace cuando el cursor pasa sobre él */
+.nav-links a:hover {
+    color: #5ddcff;
+}
+
+/* Da forma al botón de contacto del encabezado */
+.nav-button {
+    padding: 11px 20px;
+    border: 1px solid #6c63ff;
+    border-radius: 8px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+/* Cambia el fondo del botón cuando el cursor pasa sobre él */
+.nav-button:hover {
+    background-color: #6c63ff;
+}
+
+
+/* SECCIÓN PRINCIPAL */
+
+/* Define el tamaño mínimo, la alineación y el fondo de la primera sección */
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 85% 45%, rgba(83, 68, 220, 0.16), transparent 40%);
+}
+
+/* Divide el contenido principal en dos columnas: texto e ilustración */
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 55px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+/* Da estilo a la pequeña etiqueta que aparece sobre el título principal */
+.tag {
+    display: inline-block;
+    color: #62d8f5;
+    background: rgba(49, 195, 235, 0.10);
+    border: 1px solid rgba(49, 195, 235, 0.20);
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* Controla el tamaño y la apariencia del título principal */
+.hero-text h1 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+/* Aplica un degradado de colores a ciertas palabras de los títulos */
+.hero-text h1 span,
+.section-heading h2 span {
+    background: linear-gradient(90deg, #6e72ff, #42d5ed);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Da formato al párrafo que acompaña al título principal */
+.hero-text > p {
+    color: #aab4c9;
+    font-size: 15px;
+    max-width: 520px;
+    margin-bottom: 30px;
+}
+
+/* Organiza los botones de la sección principal y permite que bajen de línea si hace falta */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Estilos que comparten los dos botones principales */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 14px 23px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+/* Diseña el botón principal con un fondo degradado */
+.btn-primary {
+    background: linear-gradient(100deg, #655df2, #328eea);
+    color: white;
+    box-shadow: 0 8px 25px rgba(84, 89, 235, 0.20);
+}
+
+/* Eleva ligeramente el botón principal cuando el cursor pasa sobre él */
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(84, 89, 235, 0.35);
+}
+
+/* Diseña el segundo botón con un borde y un color de texto claro */
+.btn-secondary {
+    border: 1px solid #303b53;
+    color: #d7deed;
+}
+
+/* Cambia el color del borde al pasar el cursor sobre el segundo botón */
+.btn-secondary:hover {
+    border-color: #6e72ff;
+}
+
+/* Coloca los datos destacados en una fila y les da separación */
+.hero-info {
+    display: flex;
+    gap: 45px;
+    margin-top: 50px;
+}
+
+/* Organiza cada dato destacado en una columna */
+.hero-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Define el tamaño de los datos principales */
+.hero-info strong {
+    font-size: 19px;
+}
+
+/* Da formato a los textos pequeños que acompañan a los datos */
+.hero-info span {
+    font-size: 11px;
+    color: #8995aa;
+}
+
+
+/* ILUSTRACIÓN TECNOLÓGICA */
+
+/* Centra la tarjeta tecnológica y permite colocar elementos decorativos a su alrededor */
+.hero-visual {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Crea un efecto de luz detrás de la tarjeta */
+.visual-glow {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: #5145df;
+    opacity: 0.20;
+    filter: blur(100px);
+    border-radius: 50%;
+}
+
+/* Da forma y apariencia a la tarjeta que contiene la ilustración tecnológica */
+.tech-card {
+    position: relative;
+    z-index: 2;
+    width: 340px;
+    padding: 28px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #17243e, #101a30);
+    border: 1px solid rgba(112, 137, 255, 0.25);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+/* Organiza los elementos de la parte superior de la tarjeta */
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 9px;
+    color: #8c9bb7;
+    letter-spacing: 1px;
+}
+
+/* Crea el pequeño círculo que funciona como indicador de estado */
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #4ee2bd;
+}
+
+/* Coloca los tres puntos del menú al extremo derecho */
+.card-menu {
+    margin-left: auto;
+    font-size: 15px;
+}
+
+/* Diseña el espacio que contiene el dibujo tecnológico */
+.tech-icon {
+    width: 125px;
+    height: 125px;
+    margin: 30px auto 20px;
+    display: grid;
+    place-items: center;
+    border-radius: 30px;
+    background: linear-gradient(135deg, rgba(102, 95, 255, 0.25), rgba(41, 195, 230, 0.15));
+    color: #6edcf8;
+}
+
+/* Define el tamaño del dibujo SVG que aparece dentro del espacio tecnológico */
+.tech-icon svg {
+    width: 85px;
+}
+
+/* Centra el título de la tarjeta y define su tamaño */
+.tech-card h2 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/* Da formato al párrafo que aparece debajo del título de la tarjeta */
+.tech-card > p {
+    font-size: 12px;
+    color: #98a7c1;
+    text-align: center;
+}
+
+/* Separa la barra de progreso del contenido anterior */
+.progress-area {
+    margin-top: 30px;
+}
+
+/* Coloca el nombre del progreso y el porcentaje en extremos opuestos */
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    color: #aab4c9;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+/* Diseña el fondo de la barra de progreso */
+.progress-bar {
+    height: 6px;
+    background: #293650;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Diseña la parte coloreada que representa el avance de la barra */
+.progress-bar span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #7068ff, #39c9ed);
+    border-radius: 10px;
+}
+
+/* Organiza los textos que aparecen en la parte inferior de la tarjeta */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding-top: 17px;
+    border-top: 1px solid #293650;
+    font-size: 10px;
+    color: #71d9ed;
+}
+
+/* Estilos generales para los elementos decorativos que flotan alrededor de la tarjeta */
+.floating-element {
+    position: absolute;
+    z-index: 3;
+    color: #6dd9fa;
+    background: #17243e;
+    border: 1px solid #354b72;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Ubica y da forma al primer elemento decorativo */
+.element-one {
+    top: 35px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 28px;
+}
+
+/* Ubica y da formato al segundo elemento decorativo */
+.element-two {
+    bottom: 45px;
+    left: 10px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-size: 25px;
+}
+
+/* Ubica y da formato al tercer elemento decorativo */
+.element-three {
+    bottom: 100px;
+    right: 5px;
+    padding: 12px 17px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+
+/* SECCIÓN NOSOTROS */
+
+/* Cambia el fondo para diferenciar esta sección de las demás */
+.about {
+    background: #0d1629;
+}
+
+/* Divide el contenido de esta sección en dos columnas */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+/* Da formato a las pequeñas etiquetas que identifican las secciones */
+.section-tag {
+    display: inline-block;
+    color: #56cde9;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+/* Define el tamaño y la separación de los títulos de las secciones */
+.section-heading h2 {
+    font-size: 38px;
+    line-height: 1.25;
+    letter-spacing: -1px;
+}
+
+/* Da formato al párrafo de la sección Nosotros */
+.about-content > p {
+    color: #aab4c9;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* SECCIÓN SERVICIOS */
+
+/* Establece el fondo de la sección de servicios */
+.services {
+    background: #080e1c;
+}
+
+/* Centra el título y el texto introductorio de la sección */
+.center {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
+
+/* Da formato al párrafo que aparece debajo del título de servicios */
+.center > p {
+    color: #aab4c9;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Organiza las tarjetas de servicios en tres columnas */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Define el fondo, el borde y el espacio interno de cada tarjeta de servicio */
+.service-card {
+    padding: 35px 28px;
+    background: #111d33;
+    border: 1px solid #25344f;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+/* Eleva la tarjeta y cambia su borde cuando el cursor pasa sobre ella */
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #625ff0;
+}
+
+/* Diseña el cuadro donde aparece el icono de cada servicio */
+.service-icon {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    background: rgba(100, 96, 255, 0.14);
+    border-radius: 13px;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+/* Define el tamaño y el espacio inferior de los títulos de las tarjetas */
+.service-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+/* Da formato a las descripciones de cada servicio */
+.service-card p {
+    color: #98a7c1;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* SECCIÓN CONTACTO */
+
+/* Establece el fondo de la sección de contacto */
+.contact {
+    background: #0d1629;
+}
+
+/* Diseña el cuadro principal donde aparece la invitación de contacto */
+.contact-box {
+    padding: 65px 30px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #303e66;
+    background:
+        radial-gradient(circle at top right, rgba(98, 87, 255, 0.20), transparent 45%),
+        #111e37;
+}
+
+/* Define el ancho, tamaño y posición del título de contacto */
+.contact-box h2 {
+    max-width: 650px;
+    margin: 0 auto 15px;
+    font-size: 36px;
+    line-height: 1.3;
+}
+
+/* Da formato al texto que acompaña la invitación de contacto */
+.contact-box p {
+    color: #aab4c9;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+
+/* PIE DE PÁGINA */
+
+/* Define el fondo, el borde superior y el espacio del pie de página */
+.footer {
+    background: #070c17;
+    border-top: 1px solid #202b40;
+    padding: 30px 0;
+}
+
+/* Coloca el logo y los textos del pie de página en una fila */
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Da formato a los textos pequeños que aparecen al final de la página */
+.footer-content p,
+.footer-content > span {
+    color: #8793aa;
+    font-size: 11px;
+}
+
+
+/* DISEÑO RESPONSIVO */
+
+/* Estos estilos se aplican cuando la pantalla tiene un ancho máximo de 850 píxeles */
+@media (max-width: 850px) {
+
+    /* Coloca el texto y la ilustración principal uno debajo del otro */
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    /* Centra el párrafo de la sección principal */
+    .hero-text > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Centra los botones y los datos destacados */
+    .hero-buttons,
+    .hero-info {
+        justify-content: center;
+    }
+
+    /* Ajusta el espacio de la ilustración para esta pantalla */
+    .hero-visual {
+        min-height: 380px;
+    }
+
+    /* Coloca el contenido de Nosotros en una sola columna */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    /* Organiza las tarjetas de servicios en dos columnas */
+    .service-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* Estos estilos se aplican cuando la pantalla tiene un ancho máximo de 600 píxeles */
+@media (max-width: 600px) {
+
+    /* Reduce un poco la altura del encabezado */
+    .navbar {
+        min-height: 75px;
+    }
+
+    /* Oculta los enlaces del menú para aprovechar mejor el espacio */
+    .nav-links {
+        display: none;
+    }
+
+    /* Reduce el tamaño del botón de contacto */
+    .nav-button {
+        padding: 9px 12px;
+        font-size: 11px;
+    }
+
+    /* Reduce los espacios de la sección principal en celulares */
+    .hero-content {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    /* Ajusta el tamaño del título principal para pantallas pequeñas */
+    .hero-text h1 {
+        font-size: 39px;
+    }
+
+    /* Reduce la separación entre los datos destacados */
+    .hero-info {
+        gap: 22px;
+    }
+
+    /* Reduce el ancho y el espacio interno de la tarjeta tecnológica */
+    .tech-card {
+        width: 290px;
+        padding: 22px;
+    }
+
+    /* Ajusta la altura del espacio de la ilustración */
+    .hero-visual {
+        min-height: 350px;
+    }
+
+    /* Reduce el espacio superior e inferior de las secciones */
+    .section {
+        padding: 70px 0;
+    }
+
+    /* Disminuye el tamaño de los títulos de las secciones */
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    /* Coloca las tarjetas de servicios una debajo de otra */
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reduce el tamaño del título de contacto */
+    .contact-box h2 {
+        font-size: 27px;
+    }
+
+    /* Coloca los elementos del pie de página en columna y los centra */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
